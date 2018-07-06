@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>MyJavaTutoriels</groupId>
+  <artifactId>MyJavaTutoriels</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <properties>
+  	<slf4j.version>2.11.0</slf4j.version>
+  	<log4j.Version>2.11.0</log4j.Version>
+  	<poi.Version>3.17</poi.Version>
+  	 <java.version>1.8</java.version>
+  </properties>
+  <repositories>
+  	 <repository>
+            <id>org.jboss.repository.releases</id>
+            <name>JBoss Maven Release Repository</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/releases</url>
+        </repository>
+  </repositories>
+  <dependencies>
+  <!-- Used to work with the older excel file format - `.xls` -->
+  <!--https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		  <dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>${poi.Version}</version>
+		</dependency> 
+  <!-- Used to work with the newer excel file format - `.xlsx` -->
+  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>${poi.Version}</version>
+		</dependency>
+     <dependency>
+     	<groupId>org.apache.logging.log4j</groupId>
+     	<artifactId>log4j-slf4j-impl</artifactId>
+     	<version>${slf4j.version}</version>
+     </dependency>
+     
+     <dependency>
+     <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>${log4j.Version}</version>
+     </dependency>
+     
+     <dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-api</artifactId>
+	    <version>${log4j.Version}</version>
+	</dependency>
+     <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+		<dependency>
+		    <groupId>org.apache.maven</groupId>
+		    <artifactId>maven-plugin-api</artifactId>
+		    <version>3.5.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-plugin-plugin -->
+		<dependency>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-plugin-plugin</artifactId>
+		    <version>3.5.2</version>
+		</dependency>
+  </dependencies>
+</project>
