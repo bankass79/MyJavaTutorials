@@ -1,4 +1,4 @@
-package writeandModifyExcelfileWithApachePoi;
+/*package writeandModifyExcelfileWithApachePoi;
 
 
 import java.io.FileOutputStream;
@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.List;
 
 
-/**
+*//**
  * @author a.guindo
  * a)HSSF is prefixed before the class name to indicate operations related to a Microsoft Excel 2003 file.
  * b)XSSF is prefixed before the class name to indicate operations related to a Microsoft Excel 2007 file or later.
@@ -17,7 +17,7 @@ import java.util.List;
  * e)Row defines an Excel row
  * f)Cell defines an Excel cell addressed in reference to a row.
  *
- */
+ *//*
 public class WriteExcel {
 	
 	String [] columns = {"ID", "name", "Email", "Date Of Birth", "Salary", "JoiningDate"};
@@ -43,11 +43,11 @@ public class WriteExcel {
 		
 		Workbook workbook = new XSSFWorkbook(); // new HSSFWorkbook () for generating .xls file
 		
-		/*
+		
 		 * CreationHelper helps us create instances of various things like DataFormat, Hyperlink, 
 		 * RichTextString etc, in a format (HSSF, XSSF) independent way
 		 * 
-		 */
+		 
 		CreationHelper creationHelper =workbook.getCreationHelper();
 		// Create a sheet
 		Sheet sheet =workbook.createSheet("Employee");
@@ -106,3 +106,4 @@ public class WriteExcel {
 	}
 
 }
+*/
