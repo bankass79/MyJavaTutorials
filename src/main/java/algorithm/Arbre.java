@@ -1,4 +1,7 @@
 package algorithm;
+
+
+
 // Construction d'un arbre 4 noeuds avec deux branches EDB, EF
 public class Arbre {
 	String value;
@@ -44,7 +47,23 @@ public class Arbre {
 
 	}
 
-
+  public static boolean containsValue( Arbre t,  int x) {
+	  
+	 while( t!= null) {
+		 
+		 if( x== Integer.parseInt(t.value)) {
+			 
+			 return true;
+			 
+			
+		 }else {
+			 
+			 t= (x < Integer.parseInt(t.value)? t.left: t.right);
+		 }
+		 
+	 }
+	return false;
+  }
 
 	@Override
 	public String toString() {
@@ -53,13 +72,15 @@ public class Arbre {
 
 	public static void main(String[] args) {
 
-		Arbre abrB = new Arbre("B", null, null);
+		Arbre abrB = new Arbre("6", null, null);
 
-		Arbre abrD= new Arbre("D", abrB, null);
+		Arbre abrD= new Arbre("8", abrB, null);
 
-		Arbre arbE=  new Arbre("E", abrD, new Arbre("F", null, null));
+		Arbre arbE=  new Arbre("1", abrD, new Arbre("3", null, null));
 
 		Arbre.inorderArbre(arbE);
-
+		
+		System.out.println(Arbre.containsValue(arbE, Integer.parseInt("5")));
+		System.out.println(Arbre.containsValue(arbE, Integer.parseInt("1")));
 	}
 }
