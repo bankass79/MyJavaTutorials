@@ -1,7 +1,12 @@
 package algorithm;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Tribionacci {
 
+	
+	private static Logger LOGGER = LoggerFactory.getLogger(Tribionacci.class);
 	
 	public static int tribionnaci(int t) {
 		
@@ -13,7 +18,9 @@ public class Tribionacci {
 			return 1;
 		}else {
 			
+			LOGGER.debug(" Tribionnaci ok");
 			return tribionnaci(t-1) + tribionnaci(t-2)+ tribionnaci(t-3);
+			
 		}
 		
 	}
